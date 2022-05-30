@@ -27,13 +27,18 @@
 
 #mainHeader {
 
-    height: 60px;
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    top: 0;
 }
 
 #logoImg {
 
     width: 160px;
     padding: 5px;
+    position: relative;
+    z-index: 1000;
 }
 
 #mainHeader > h1 {
@@ -45,22 +50,37 @@
 #mainHeader button>img {
 
     height: 50px;
+    position: relative;
+    z-index: 1000;
 }
 
 #mainNav {
 
+    background-color: #ffffff;
+    position: absolute;
+    width: 100%;
+    top: 40px;
+    padding-bottom: 10px;
     display: none;
+}
+
+#mainNav ul {
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 #mainNav a {
 
-    color: #00c4cc;
+    color: var(--black);
     text-decoration: none;
+    font-size: 1.5em;
 }
 
 #mainNav a:hover {
 
-    color: white;
+    color: var(--blue);
 }
 
 body {
@@ -73,6 +93,7 @@ body {
 main {
 
     background-color: #ffffff8e;
+    padding: 20px;
 
 }
 
@@ -93,42 +114,17 @@ img {
 
     background : url(/img/7.jpg) center center / cover no-repeat fixed;
     padding: 150px 20px;
+    min-height: 100vh;
 
-}
-
-#leftCol {
-
-    padding: 20px;
-    margin-bottom: 15px;
-}
-
-#leftCol p {
-
-    line-height: 1.3;
-}
-
-#rightCol {
-
-    padding: 20px;
-    background-color: #b18b8bad;
-}
-
-#rightCol a {
-
-    text-decoration: none;
-    color: var(--black);
-
-}
-
-#rightCol a:hover{
-
-    color: var(--blue);
 }
 
 #mainFooter {
 
     text-align: center;
-    height: 60px;
+    width: 100%;
+    height: 40px;
     padding: 5px;
     font-size: .8em;
+    position: fixed;
+    bottom: 0;
 }
