@@ -3,6 +3,7 @@
 
     <head>
         <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Kilumba Blog</title>
         <link rel="stylesheet" href="/asset/css/normalize.css">
         <link rel="stylesheet" href="/asset/css/nb.css">
@@ -23,10 +24,11 @@
                     <li><a href="about.html" title="vers la page a propo">A propos</a></li>
                 </ul>
             </nav>
-            <button><img src="/asset/img/layout/menuTogle.svg" alt="menu ouvert/fermer"></button>
+            <button id="menuTogle"><img src="/asset/img/layout/menuTogle.svg" alt="menu ouvert/fermer"></button>
         </header><!--Ici ce termine le Header-->
 
-        <section id="pageContent">
+#pageContent.blog #rightCol ul li:last-child, #pageContent.blog #rightCol ul li:last-child a:hover{
+        <section id="pageContent" class="text blog">
             <main id="leftCol">
         
                 <h1>Lorem ipsum dolor sit</h1>
@@ -38,14 +40,26 @@
                     <img src="/asset/img/5.jpg" alt="Image description de l'article">
                     <figcaption>Livre freelance</figcaption>
                 </figure>
+
+                <dl>
+                    <dt>Lorem ipsum dolor sit.</dt>
+                    <dd>Lorem ipsum dolor sit amet consectetur.</dd>
+                    <dd>Lorem ipsum dolor sit.</dd>
+
+                    <dt>Impedit porro magnam distinctio!</dt>
+                    <dd>Lorem ipsum dolor sit.</dd>
+                    <dd>Lorem ipsum dolor sit.</dd>
+                    <dd>Lorem ipsum dolor sit amet.</dd>
+                </dl>
         
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis quaerat cupiditate est molestiae velit libero repudiandae nobis. Odit, consequatur quos? Tenetur incidunt ex placeat reprehenderit quidem, odit consectetur corrupti</p>
+
                 <ul>
                     <li>Liste 1</li>
                     <li>Liste 2</li>
                     <li>Liste 2</li>
                 </ul>
-        
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis quaerat cupiditate est molestiae velit libero repudiandae nobis. Odit, consequatur quos? Tenetur incidunt ex placeat reprehenderit quidem, odit consectetur corrupti</p>
+                
             </main>
             <aside id="rightCol">
 
