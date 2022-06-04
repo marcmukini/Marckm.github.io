@@ -54,6 +54,7 @@
     width: 100%;
     top: 40px;
     padding-bottom: 10px;
+    display: none;
 }
 
 #mainNav ul {
@@ -70,6 +71,8 @@
     color: var(--black);
     text-decoration: none;
     font-size: 1.5em;
+    display: block;
+    padding-left: 100px;
 }
 
 #mainNav a:hover {
@@ -141,6 +144,36 @@ body h1{
     letter-spacing: .1em;
 }
 
+#pageContent.home {
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#pageContent.home #pictInfo{
+
+    background-color: var(--verclair);
+    padding: 40px;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+}
+
+#pageContent.home #pictInfo h1 {
+
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+#pageContent.home #pictInfo p {
+
+    margin: 10px 0;
+    font-size: .8em;
+}
+
 #pageContent.text h2 {
 
     font-size: 1.5em;
@@ -153,6 +186,14 @@ body h1{
 
     max-width: 100%;
     height: auto;
+}
+
+#pageContent.text .alineLeft{
+    float: left;
+}
+
+#pageContent.text .alineRight{
+    float: right;
 }
 
 #pageContent.text dl {
@@ -205,11 +246,14 @@ body h1{
 
     border-top: 1px solid #03383a;
     margin-top: 10px;
+    display: grid;
 }
 
 #pageContent.contact form > div > div {
 
     margin: 20px 0;
+    display: flex;
+    flex-direction: column;
 }
 
 #pageContent.contact form label {
@@ -332,6 +376,8 @@ body h1{
 #pageContent.blog #rightCol li a, #pageContent.blog #rightCol h2 a {
 
     padding: 5px;
+    display: flex;
+    justify-content: space-between;
 }
 
 #pageContent.blog #rightCol li span, #pageContent.blog #rightCol h2 span{
@@ -342,6 +388,9 @@ body h1{
     font-size: 12px;
     border-radius: 50%;
     color: var(--blanc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #pageContent.blog #rightCol li a:hover, #pageContent.blog #rightCol h2 a:hover {
@@ -373,12 +422,6 @@ body h1{
     align-items: center;
 }
 
-@media screen and (max-width:768px) {
-    #mainNav{
-        display: none;
-    }
-}
-
 @media screen and (min-width:768px) {
 
     #menuTogle{
@@ -392,11 +435,13 @@ body h1{
     #mainNav{
         position: static;
         background-color: transparent;
+        display: block;
     }
 
     #mainNav a{
         font-size: 1em;
         color: var(--blanc);
+        padding: 0 10px;
     }
 
     #mainNav ul{
@@ -413,6 +458,10 @@ body h1{
 
     #pageContent.blogL #leftCol{
         grid-template-columns: repeat(2,1fr);
+    }
+
+    #pageContent.home{
+        justify-content: flex-end;
     }
 }
 
@@ -437,6 +486,17 @@ body h1{
 
     #pageContent.left {
         grid-template-columns: 2fr 1fr;
+    }
+
+    #pageContent.contact form {
+
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+
+    #pageContent.contact form button {
+
+        grid-column: span 2;
     }
 }
 
